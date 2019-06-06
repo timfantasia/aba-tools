@@ -110,15 +110,15 @@ config.recordTypes.descriptive.schema = Joi.object().required().keys({
 
 config.recordTypes.detail.columns = [
   firstColumn,
-  { size: 7, key: 'fromBsb', format: as.v },
-  { size: 9, key: 'fromAcc', fill: ' ', justify: 'right', format: as.v },
+  { size: 7, key: 'toBsb', format: as.v },
+  { size: 9, key: 'toAcc', fill: ' ', justify: 'right', format: as.v },
   { size: 1, key: 'indicator', fill: ' ', format: as.indicator },
   { size: 2, key: 'transaction', format: as.v },
   { size: 10, key: 'amount', fill: '0', justify: 'right', format: as.amount },
   { size: 32, key: 'toName', fill: ' ', justify: 'left', format: as.v },
   { size: 18, key: 'toRef', fill: ' ', justify: 'left', format: as.v },
-  { size: 7, key: 'toBsb', format: as.v },
-  { size: 9, key: 'toAcc', fill: ' ', justify: 'right', format: as.v },
+  { size: 7, key: 'fromBsb', format: as.v },
+  { size: 9, key: 'fromAcc', fill: ' ', justify: 'right', format: as.v },
   { size: 16, key: 'fromName', fill: ' ', justify: 'left', format: as.v },
   { size: 8, key: 'tax', fill: '0', justify: 'right', format: as.amount },
 ];
