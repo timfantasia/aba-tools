@@ -82,6 +82,8 @@ config.recordTypes.descriptive.columns = [
   { size: 40, blank: true, format: as.v },
 ];
 
+var date = new Date();
+
 config.recordTypes.descriptive.schema = Joi.object().required().keys({
   //this seems to be just 1 most of the time
   sequence: Joi.number().min(1).max(99).required(),
@@ -95,7 +97,7 @@ config.recordTypes.descriptive.schema = Joi.object().required().keys({
   //name or description of the transaction as a whole eg. payroll or payments
   description: Joi.string().min(1).max(12).alphanum().trim().required(),
   //javascript date required, saves the user from having to format themselves
-  date: Joi.date().optional().default(new Date()),
+  date: Joi.date().optional().default(new Date(date.setDate(date.getDate() + 1))),
 });
 
 
