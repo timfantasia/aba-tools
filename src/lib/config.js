@@ -93,7 +93,7 @@ config.recordTypes.descriptive.schema = Joi.object().required().keys({
   //usually the company name
   userName: Joi.string().allow(' ').min(1).max(26).trim().required(),
   //not 100% sure where this number comes from
-  userId: Joi.number().min(0).max(999999).required(),
+  userId: Joi.string().length(6).regex(/^[0-9]{6}$/).required(),
   //name or description of the transaction as a whole eg. payroll or payments
   description: Joi.string().min(1).max(12).alphanum().trim().required(),
   //javascript date required, saves the user from having to format themselves
