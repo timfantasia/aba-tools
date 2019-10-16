@@ -97,7 +97,7 @@ config.recordTypes.descriptive.schema = Joi.object().required().keys({
   //name or description of the transaction as a whole eg. payroll or payments
   description: Joi.string().min(1).max(12).alphanum().trim().required(),
   //javascript date required, saves the user from having to format themselves
-  date: Joi.date().optional().default(new Date(date.setDate(date.getDate() + 1))),
+  date: Joi.date().optional().default(new Date(date.setDate(date.getDate() + 2))),
 });
 
 
