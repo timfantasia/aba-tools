@@ -32,7 +32,7 @@ as.amount = function formatAsAmount(value) {
 
 as.date = function formatAsDate(value) {
   var self = this;//will be the column definition
-  return moment().add(1,'d').format('DDMMYY');
+  return moment().add(2,'d').format('DDMMYY');
   //console.log('this',this, 'value',value);
   //return 'DDMMYY';//value.toString().trim().substr(0, self.size);
 };
