@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "underscore": "*",
-    "joi": "*",
+    "joi": "14.3.1",
     "underscore.string": "*",
     "moment": "*"
   },
